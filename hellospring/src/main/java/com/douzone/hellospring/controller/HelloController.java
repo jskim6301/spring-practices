@@ -8,18 +8,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloController {
 	
-	@RequestMapping("/hello")
+	@RequestMapping("/hello") //http://localhost:8088/hellospring/hello
 	public String hello() {
 		return "/WEB-INF/views/hello.jsp";
 	}
 	
-	@RequestMapping("/hello2")
+	@RequestMapping("/hello2") // http://localhost:8088/hellospring/hello2
 	public String hello2(String name) {
 		System.out.println(name);
 		return "/WEB-INF/views/hello2.jsp";
 	}
 	
-	@RequestMapping("/hello3")
+	@RequestMapping("/hello3") // http://localhost:8088/hellospring/hello3
 	public ModelAndView hello3(String name) {
 		
 		ModelAndView mav = new ModelAndView();
@@ -29,7 +29,7 @@ public class HelloController {
 		return mav;
 	}
 	
-	@RequestMapping("/hello4")
+	@RequestMapping("/hello4") // http://localhost:8088/hellospring/hello4
 	public String hello4(String name,Model model) {
 		model.addAttribute("name",name);
 		return "/WEB-INF/views/hello4.jsp";
