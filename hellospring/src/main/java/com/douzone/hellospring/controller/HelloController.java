@@ -13,13 +13,13 @@ public class HelloController {
 		return "/WEB-INF/views/hello.jsp";
 	}
 	
-	@RequestMapping("/hello2") // http://localhost:8088/hellospring/hello2
+	@RequestMapping("/hello2") // http://localhost:8088/hellospring/hello2?name=kim
 	public String hello2(String name) {
 		System.out.println(name);
 		return "/WEB-INF/views/hello2.jsp";
 	}
 	
-	@RequestMapping("/hello3") // http://localhost:8088/hellospring/hello3
+	@RequestMapping("/hello3") // http://localhost:8088/hellospring/hello3?name=kimjisul
 	public ModelAndView hello3(String name) {
 		
 		ModelAndView mav = new ModelAndView();

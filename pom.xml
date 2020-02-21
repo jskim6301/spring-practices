@@ -11,5 +11,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>hellospring</module>
+		<module>hellostring-back</module>
+		<module>emaillist03</module>
 	</modules>
 </project>

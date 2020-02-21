@@ -1,6 +1,7 @@
 package com.douzone.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -49,10 +50,24 @@ public class UserController {
 	}
 */
 	
-
+/*
 	@ResponseBody
 	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public String join(UserVO userVO) {
+		System.out.println(userVO.getName());
+//		userRepository.insert(userVO);
+		
+		
+//		return "UserController:join";
+//		return "redirect:/hellospring/main";  => "redirect:/main";  가운데 /hellospring이 알아서 찾아준다
+		return "redirect:/main";
+	}
+*/
+	
+
+	@ResponseBody
+	@RequestMapping(value="/join",method=RequestMethod.POST)
+	public String join(@ModelAttribute UserVO userVO) {
 		System.out.println(userVO.getName());
 //		userRepository.insert(userVO);
 		
