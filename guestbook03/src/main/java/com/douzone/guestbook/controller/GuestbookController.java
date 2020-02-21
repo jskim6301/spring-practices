@@ -39,8 +39,8 @@ public class GuestbookController {
 		return "deleteform";
 	}
 	
-	@RequestMapping(value="/delete",method=RequestMethod.POST)
-	public String delete(@RequestParam("no") Long no, @RequestParam("password") String password) {
+	@RequestMapping(value="/delete/{no}",method=RequestMethod.POST)
+	public String delete(@PathVariable("no") Long no, @RequestParam("password") String password) {
 		System.out.println(no);
 		System.out.println(password);
 		guestbookRepository.delete(no,password);
