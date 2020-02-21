@@ -1,18 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>com.douzone</groupId>
-		<artifactId>spring-practices</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	
-	<artifactId>emaillist03</artifactId>
-	<packaging>war</packaging>
-	
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.douzone</groupId>
+    <artifactId>spring-practices</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>guestbook03</artifactId>
+  <packaging>war</packaging>
+  
+ 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<org.springframework-version>4.3.2.RELEASE</org.springframework-version>
@@ -120,7 +117,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://192.168.1.115:8080/manager/text</url>
-					<path>/emaillist03</path>
+					<path>/guestbook03</path>
 					<username>admin</username>
 					<password>admin</password>
 				</configuration>
@@ -129,6 +126,6 @@
 
 		</plugins>
 
-	</build>  	
-	
+	</build>  	  
+  
 </project>
