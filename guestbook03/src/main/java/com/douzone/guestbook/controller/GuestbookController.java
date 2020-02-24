@@ -40,7 +40,9 @@ public class GuestbookController {
 	}
 	
 	@RequestMapping(value="/delete/{no}",method=RequestMethod.POST)
-	public String delete(@PathVariable("no") Long no, @RequestParam("password") String password) {
+	public String delete(
+			@PathVariable("no") Long no,
+			@RequestParam(value="password", required=true, defaultValue="") String password) {
 		System.out.println(no);
 		System.out.println(password);
 		guestbookRepository.delete(no,password);
