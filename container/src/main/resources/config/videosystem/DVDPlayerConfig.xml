@@ -48,7 +48,7 @@
 	<!-- 06. 빈 설정 - wiring collection1 -->
 	<bean id="captainAmerica" class="com.douzone.container.videosystem.BlankDisc" >
 		<constructor-arg name="title" value="Avengers Captain America"/>
-		<constructor-arg name="" value="MARVEL" />
+		<constructor-arg name="studio" value="MARVEL" />
 		<constructor-arg><null /></constructor-arg>
 	</bean>
 		

@@ -11,33 +11,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import config.soundsystem.CDPlayerConfig;
-
-
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes= {CDPlayerConfig.class})
-public class CDPlayerJavaConfigTest {
+@ContextConfiguration(locations= {"classpath:config/soundsystem/CDPlayerConfig.xml"})
+public class CDPlayerXmlConfigTest {
 	
 	@Rule
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 	
+	//@Autowired
+	//private CompactDisc cd;
 	
 	@Autowired
-	private CompactDisc cd;
+	private CDPlayer cdPlayer;
 	
-//	@Autowired
-//	private CDPlayer cdPlayer;
+	//@Test
+	//public void testCDNull() {
+	//	assertNotNull(cd);
+	//}
 	
 	@Test
-	public void testCDNull() {
-		assertNotNull(cd);
-	}
+	public void testCDPlayerNull() {
+		assertNotNull(cdPlayer);
+	}	
 	
 	@Test
 	public void testPlay() {
-		cd.play();
-		assertEquals("Playing 지구멸망 by 양승호",systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
-		
+		cdPlayer.play();
+		assertEquals("Playing 지구멸망 by 양승호",systemOutRule.getLog().replace("\r\n", "").replace("\n","")); //그냥 systemOutRule.getLog()를 하면 문자열에 개행때문에 JUnit테스트 오류가 난다.
 	}
 }
